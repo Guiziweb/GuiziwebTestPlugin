@@ -1,0 +1,5 @@
+guiziweb_sylius_test_admin:
+    resource: "@GuiziwebSyliusTestPlugin/config/routes/admin.yaml"
+
+guiziweb_sylius_test_shop:
+    resource: "@GuiziwebSyliusTestPlugin/config/routes/shop.yaml"

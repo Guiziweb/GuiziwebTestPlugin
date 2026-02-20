@@ -1,0 +1,13 @@
+# Delete these routes and define your own shop routes here
+
+guiziweb_sylius_test_static_welcome:
+    path: /static-welcome/{name}
+    defaults:
+        _controller: Guiziweb\SyliusTestPlugin\Controller\GreetingController::staticallyGreetAction
+        name: ~
+
+guiziweb_sylius_test_dynamic_welcome:
+    path: /dynamic-welcome/{name}
+    defaults:
+        _controller: Guiziweb\SyliusTestPlugin\Controller\GreetingController::dynamicallyGreetAction
+        name: ~
