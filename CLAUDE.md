@@ -84,8 +84,8 @@ composer run test-app-init
 This is a **Sylius Plugin Skeleton** - a template for creating Sylius e-commerce plugins. It provides a complete development environment with both traditional and Docker setups.
 
 ### Core Structure
-- **Main Plugin Class**: `src/AcmeSyliusExamplePlugin.php` - Entry point using `SyliusPluginTrait`
-- **DI Extension**: `src/DependencyInjection/AcmeSyliusExampleExtension.php` - Handles service loading and Doctrine migrations
+- **Main Plugin Class**: `src/GuiziwebSyliusTestPlugin.php` - Entry point using `SyliusPluginTrait`
+- **DI Extension**: `src/DependencyInjection/GuiziwebSyliusTestExtension.php` - Handles service loading and Doctrine migrations
 - **Services**: `config/services.xml` - Service definitions with XML configuration
 - **Routes**: `config/routes/` - Separate admin and shop route definitions
 - **Templates**: `templates/` - Twig templates for admin and shop with Twig hooks support
@@ -113,12 +113,17 @@ Database credentials should be configured in:
 - `tests/TestApplication/.env` (for development)
 - `tests/TestApplication/.env.test` (for testing)
 
-## AI Development Guides
+## Claude Code Worktree Convention
 
-This project includes specialized AI guides to assist with common plugin development tasks:
+When creating a worktree or branch, use the GitHub issue number and a short description:
 
-- **CLEANUP_GUIDE.md** - Guidelines for cleaning up and organizing plugin code
-- **RENAME_GUIDE.md** - Step-by-step instructions for renaming plugins and components
-- **COMPATIBILITY_GUIDE.md** - Best practices for maintaining compatibility across different Sylius versions
+- Branch format: `<prefix>/<issue_number>-<short-description>`
+- Examples:
+  - `feature/5-add-book-crud`
+  - `fix/7-doctrine-cache-adapter`
 
-These guides provide detailed instructions and automated workflows to help maintain code quality and ensure proper plugin structure.
+Prefixes:
+- `feature/` for new features
+- `fix/` for bug fixes
+- `refactor/` for refactoring
+
