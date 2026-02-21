@@ -11,6 +11,6 @@
 
     <services>
         <service id="Guiziweb\SyliusTestPlugin\Controller\GreetingController" autowire="true" autoconfigure="true" public="true" />
-        <!-- Put your services here -->
+        <service id="Guiziweb\SyliusTestPlugin\Controller\HealthController" autoconfigure="true" public="true" />
     </services>
 </container>

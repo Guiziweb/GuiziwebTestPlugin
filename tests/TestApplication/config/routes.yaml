@@ -3,3 +3,6 @@ guiziweb_sylius_test_admin:
 
 guiziweb_sylius_test_shop:
     resource: "@GuiziwebSyliusTestPlugin/config/routes/shop.yaml"
+
+guiziweb_sylius_test_api:
+    resource: "@GuiziwebSyliusTestPlugin/config/routes/api.yaml"

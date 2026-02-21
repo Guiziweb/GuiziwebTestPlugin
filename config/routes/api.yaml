@@ -1,0 +1,5 @@
+guiziweb_sylius_test_health:
+    path: /api/health
+    methods: [GET]
+    defaults:
+        _controller: Guiziweb\SyliusTestPlugin\Controller\HealthController
