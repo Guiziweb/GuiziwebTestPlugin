@@ -8,18 +8,31 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 final class HealthEndpointTest extends WebTestCase
 {
-    public function testHealthEndpointReturnsOk(): void
+    public function testHealthEndpointReturnsSuccessfully(): void
     {
         $client = self::createClient();
 
         $client->request('GET', '/api/health');
 
-        $response = $client->getResponse();
+        self::assertResponseIsSuccessful();
+    }
 
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertSame('application/json', $response->headers->get('Content-Type'));
+    public function testHealthEndpointReturnsJson(): void
+    {
+        $client = self::createClient();
 
-        $data = json_decode($response->getContent(), true);
+        $client->request('GET', '/api/health');
+
+        self::assertResponseHeaderSame('Content-Type', 'application/json');
+    }
+
+    public function testHealthEndpointReturnsStatusOk(): void
+    {
+        $client = self::createClient();
+
+        $client->request('GET', '/api/health');
+
+        $data = json_decode($client->getResponse()->getContent(), true);
         $this->assertSame(['status' => 'ok'], $data);
     }
 }
