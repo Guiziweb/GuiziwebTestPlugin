@@ -1,0 +1,33 @@
+sylius_twig_hooks:
+    hooks:
+        'sylius_admin.book.show.content':
+            sections:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections.html.twig'
+                priority: 0
+
+        'sylius_admin.book.show.content.header.title_block':
+            title:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/header/title_block/title.html.twig'
+                priority: 100
+            actions:
+                template: '@SyliusAdmin/shared/crud/show/content/header/title_block/actions/edit.html.twig'
+                priority: 0
+
+        'sylius_admin.book.show.content.sections':
+            general:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections/general.html.twig'
+                priority: 0
+
+        'sylius_admin.book.show.content.sections.general':
+            title:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections/general/title.html.twig'
+                priority: 400
+            author:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections/general/author.html.twig'
+                priority: 300
+            isbn:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections/general/isbn.html.twig'
+                priority: 200
+            price:
+                template: '@GuiziwebSyliusTestPlugin/admin/book/show/content/sections/general/price.html.twig'
+                priority: 100
