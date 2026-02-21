@@ -1,0 +1,14 @@
+guiziweb_sylius_test:
+    ui:
+        books: Books
+        book: Book
+        title: Title
+        author: Author
+        isbn: ISBN
+        price: Price (cents)
+    form:
+        book:
+            title: Title
+            author: Author
+            isbn: ISBN
+            price: Price (cents)

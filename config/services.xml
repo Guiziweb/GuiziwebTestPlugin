@@ -11,6 +11,14 @@
 
     <services>
         <service id="Guiziweb\SyliusTestPlugin\Controller\GreetingController" autowire="true" autoconfigure="true" public="true" />
-        <!-- Put your services here -->
+        <service id="Guiziweb\SyliusTestPlugin\Form\Type\BookType" autoconfigure="true" autowire="true">
+            <tag name="form.type" />
+        </service>
+        <service id="Guiziweb\SyliusTestPlugin\Grid\BookGrid" autoconfigure="true" autowire="true">
+            <tag name="sylius.grid" />
+        </service>
+        <service id="Guiziweb\SyliusTestPlugin\Menu\AdminMenuListener" autoconfigure="true" autowire="true">
+            <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="addAdminMenuItems" />
+        </service>
     </services>
 </container>
