@@ -1,1 +1,13 @@
-# Define your own admin routes here
+guiziweb_sylius_test_admin_book:
+    resource: |
+        alias: guiziweb_sylius_test.book
+        section: admin
+        templates: "@SyliusAdmin/shared/crud"
+        grid: guiziweb_sylius_test_book
+        vars:
+            all:
+                subheader: guiziweb_sylius_test.ui.books
+            index:
+                icon: book
+    type: sylius.resource
+    prefix: /admin
