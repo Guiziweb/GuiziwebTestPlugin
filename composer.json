@@ -10,7 +10,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "doctrine/cache": "^2.2",
         "sylius/sylius": "^2.0"
     },
     "require-dev": {

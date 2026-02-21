@@ -15,10 +15,12 @@ class Book implements ResourceInterface, TimestampableInterface
 {
     use TimestampableTrait;
 
-    #[ORM\Column(name: 'created_at', type: 'datetime', nullable: true)]
+    /** @var \DateTimeInterface|null */
+    #[ORM\Column(type: 'datetime', nullable: true)]
     protected $createdAt;
 
-    #[ORM\Column(name: 'updated_at', type: 'datetime', nullable: true)]
+    /** @var \DateTimeInterface|null */
+    #[ORM\Column(type: 'datetime', nullable: true)]
     protected $updatedAt;
 
     #[ORM\Id]

@@ -1,10 +1,14 @@
-guiziweb_sylius_test.ui.books: Books
-guiziweb_sylius_test.ui.book: Book
-guiziweb_sylius_test.ui.title: Title
-guiziweb_sylius_test.ui.author: Author
-guiziweb_sylius_test.ui.isbn: ISBN
-guiziweb_sylius_test.ui.price: Price (cents)
-guiziweb_sylius_test.form.book.title: Title
-guiziweb_sylius_test.form.book.author: Author
-guiziweb_sylius_test.form.book.isbn: ISBN
-guiziweb_sylius_test.form.book.price: Price (cents)
+guiziweb_sylius_test:
+    ui:
+        books: Books
+        book: Book
+        title: Title
+        author: Author
+        isbn: ISBN
+        price: Price (cents)
+    form:
+        book:
+            title: Title
+            author: Author
+            isbn: ISBN
+            price: Price (cents)

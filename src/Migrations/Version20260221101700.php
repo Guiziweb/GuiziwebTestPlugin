@@ -16,11 +16,19 @@ final class Version20260221101700 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        $this->addSql('CREATE TABLE guiziweb_book (id INT AUTO_INCREMENT NOT NULL, title VARCHAR(255) NOT NULL, author VARCHAR(255) NOT NULL, isbn VARCHAR(13) NOT NULL, price INT NOT NULL, created_at DATETIME DEFAULT NULL, updated_at DATETIME DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET UTF8 COLLATE `UTF8_unicode_ci` ENGINE = InnoDB');
+        $table = $schema->createTable('guiziweb_book');
+        $table->addColumn('id', 'integer', ['autoincrement' => true]);
+        $table->addColumn('title', 'string', ['length' => 255]);
+        $table->addColumn('author', 'string', ['length' => 255]);
+        $table->addColumn('isbn', 'string', ['length' => 13]);
+        $table->addColumn('price', 'integer');
+        $table->addColumn('createdAt', 'datetime', ['notnull' => false]);
+        $table->addColumn('updatedAt', 'datetime', ['notnull' => false]);
+        $table->setPrimaryKey(['id']);
     }
 
     public function down(Schema $schema): void
     {
-        $this->addSql('DROP TABLE guiziweb_book');
+        $schema->dropTable('guiziweb_book');
     }
 }
